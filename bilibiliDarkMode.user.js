@@ -291,6 +291,15 @@
                 color: var(--dark9) !important;
                 background-color: var(--dark3) !important;
             }
+
+            /*up主名字*/
+            .up-info .up-info_right .name .username {
+                color: var(--dark9) !important;
+            }
+
+            .up-info .up-info_right .name .username:hover {
+                color: var(--blue0) !important;
+            }
         `)
         return
     }
