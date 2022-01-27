@@ -456,7 +456,7 @@
             .card .main-content .user-name a:not([style]) {
                 color: var(--dark9) !important;
             }
-            .content-full .content-ellipsis {
+            .content-full, .content-ellipsis {
                 color: var(--dark9) !important;
             }
 
