@@ -300,6 +300,10 @@
             .up-info .up-info_right .name .username:hover {
                 color: var(--blue0) !important;
             }
+
+            .base-video-sections .video-section-title .title {
+                color: var(--dark6) !important;
+            }
         `)
         return
     }
