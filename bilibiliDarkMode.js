@@ -1,6 +1,8 @@
 // ==UserScript==
 // @name         My bilibili dark mode
 // @namespace    https://bbs.tampermonkey.net.cn/
+// @updateURL    https://cdn.jsdelivr.net/gh/SoClear/scripts@main/bilibiliDarkMode.js
+// @downloadURL  https://cdn.jsdelivr.net/gh/SoClear/scripts@main/bilibiliDarkMode.js
 // @version      0.1.0
 // @description  bilibili黑色模式
 // @author       soclear
