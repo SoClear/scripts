@@ -304,6 +304,21 @@
             .base-video-sections .video-section-title .title {
                 color: var(--dark6) !important;
             }
+
+            /*视频分段背景*/
+            .player-auxiliary-viewpointlist {
+                color: var(--dark2) !important;
+            }
+
+            .player-auxiliary-area .player-auxiliary-collapse-viewpointlist, 
+            .player-auxiliary-viewpointlist {
+                background-color: var(--dark2) !important;
+            }
+
+            .player-auxiliary-viewpoint-list > *[class="player-auxiliary-viewpointlist-item"] .player-auxiliary-viewpointlist-content {
+                color: var(--dark9) !important;
+            }
+
         `)
         return
     }
