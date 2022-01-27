@@ -72,6 +72,7 @@
                 --dark2: #222;
                 --dark3: #333;
                 --dark4: #444;
+                --dark5: #555;
                 --dark6: #666;
                 --dark9: #999;
                 --blue0:#03a0d6;
@@ -317,6 +318,24 @@
 
             .player-auxiliary-viewpoint-list > *[class="player-auxiliary-viewpointlist-item"] .player-auxiliary-viewpointlist-content {
                 color: var(--dark9) !important;
+            }
+
+            /*视频选集*/
+            .multi-page {
+                background-color: var(--dark2) !important;
+            }
+
+            .multi-page .cur-list .list-box li a {
+                color: var(--dark9) !important;
+            }
+
+            .multi-page .cur-list .list-box li.on {
+                color: var(--dark4) !important;
+                background-color: var(--dark5) !important;
+            }
+
+            .multi-page .cur-list .list-box li:hover {
+                background-color: var(--dark4) !important;
             }
 
         `)
