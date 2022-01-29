@@ -9,14 +9,18 @@
 // @author       soclear
 // @match        https://*.bilibili.com/*
 // @grant        GM_addStyle
+// @run-at       document-start
 // ==/UserScript==
 
 (function () {
     'use strict';
+
     // 当前页面地址
-    let url=window.location.href
-    
-    if (url.startsWith("https://message.bilibili.com")) {
+    let url = window.location.href
+
+    if (url.startsWith("https://message.bilibili.com/pages/nav/index_new_pc_sync")
+        || url.startsWith("https://message.bilibili.com/pages/nav/header_sync")
+    ) {
         console.log("啥也不是啥也不是啥也不是啥也不是啥也不是啥也不是啥也不是啥也不是啥也不是啥也不是", url)
         return
     }
@@ -25,48 +29,52 @@
     if (url.startsWith("https://www.bilibili.com/") && url.lastIndexOf('/') == 24) {
         console.log("主页主页主页主页主页主页主页主页主页主页主页主页主页主页主页主页主页主页主页主页", url)
         GM_addStyle(`
-            :root{
-            --dark0: #000;
-            --dark1: #111;
-            --dark2: #222;
-            --dark3: #333;
-            --dark4: #444;
-            --dark6: #666;
-            --dark9: #999;
-            --blue0:#03a0d6;
-            
-            /*页面整体背景*/
-            --Wh0: var(--dark0);
-            /*顶部导航栏*/
-            --Ga11: #050505;
-            /*分区导航标签背景*/
-            --Ga0_s: var(--dark2);
-            /*分区导航标签边框颜色,未下拉时搜索框背景颜色*/
-            --Ga1_s: var(--dark2);
-            /*下拉时搜索框背景*/
-            --Ga1: var(--dark2);
-            /*视频标题文字*/
-            --Ga10: var(--dark9);
-            /*搜索框的边框*/
-            --Ga2: var(--dark2);
-            /*排行榜第二种颜色*/
-            --Ga0: var(--dark1);
+           :root{
+                --dark0: #000;
+                --dark1: #111;
+                --dark2: #222;
+                --dark3: #333;
+                --dark4: #444;
+                --dark6: #666;
+                --dark9: #999;
+                --blue0:#03a0d6;
+                
+                /*页面整体背景*/
+                --Wh0: var(--dark0) !important;
+                /*顶部导航栏*/
+                --Ga11: #050505 !important;
+                /*分区导航标签背景*/
+                --Ga0_s: var(--dark2) !important;
+                /*分区导航标签边框颜色,未下拉时搜索框背景颜色*/
+                --Ga1_s: var(--dark2) !important;
+                /*下拉时搜索框背景*/
+                --Ga1: var(--dark2) !important;
+                /*视频标题文字*/
+                --Ga10: var(--dark9) !important;
+                /*搜索框的边框*/
+                --Ga2: var(--dark2) !important;
+                /*排行榜第二种颜色*/
+                --Ga0: var(--dark1) !important;
             }
 
             /*视频数据*/
             .bili-video-card__stats * {
                 color:#bbb !important;
             }
-        `)
 
+            /*视频卡片的边角*/
+            .v-img {
+                background-color: var(--dark0) !important;
+            }
+        `)
         return
     }
 
-    // 视频页
+    // 视频
     if (url.startsWith("https://www.bilibili.com/video/")) {
         console.log("视频视频视频视频视频视频视频视频视频视频视频视频视频视频视频视频视频视频视频视频", url)
         GM_addStyle(`
-            :root{
+            :root {
                 --dark0: #000;
                 --dark1: #111;
                 --dark2: #222;
@@ -75,24 +83,36 @@
                 --dark5: #555;
                 --dark6: #666;
                 --dark9: #999;
-                --blue0:#03a0d6;
-
+                --blue0: #03a0d6;
                 /*页面整体背景*/
-                --Wh0: var(--dark0);
+                --Wh0: var(--dark0) !important;
                 /*顶部导航栏*/
-                --Ga11: #050505;
+                --Ga11: #050505 !important;
                 /*分区导航标签背景*/
-                --Ga0_s: var(--dark2);
+                --Ga0_s: var(--dark2) !important;
                 /*分区导航标签边框颜色,未下拉时搜索框背景颜色*/
-                --Ga1_s: var(--dark2);
+                --Ga1_s: var(--dark2) !important;
                 /*下拉时搜索框背景*/
-                --Ga1: var(--dark2);
+                --Ga1: var(--dark2) !important;
                 /*视频标题文字*/
-                --Ga10: var(--dark9);
+                --Ga10: var(--dark9) !important;
                 /*搜索框的边框*/
-                --Ga2: var(--dark2);
+                --Ga2: var(--dark2) !important;
                 /*排行榜第二种颜色*/
-                --Ga0: var(--dark1);
+                --Ga0: var(--dark1) !important;
+            }
+
+            /*头部导航条*/
+            #biliMainHeader .mini-header 
+            {
+                background-color: #050505 !important;
+            }
+
+
+            /*取消播放器四周光晕*/
+            .bilibili-player {
+                -webkit-box-shadow: 0 0 !important;
+                box-shadow: 0 0 !important;
             }
 
             /*整体背景,视频下方弹幕框背景,评论区*/
@@ -512,6 +532,10 @@
 
             .bangumi-container {
                 background-color: var(--dark5) !important;
+            }
+
+            .bb-comment .comment-list .list-item .user .text-con, .comment-bilibili-fold .comment-list .list-item .user .text-con {
+                color: var(--dark9) !important;
             }
             
         `)
