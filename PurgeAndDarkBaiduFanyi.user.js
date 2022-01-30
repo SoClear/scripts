@@ -32,7 +32,8 @@
         .sug-wrap,
         .dictionary-wrap.dictionary-wrap-f .simple-dict-f,
         .output-blank,
-        .history-container
+        .history-container,
+        .keywords-outter
         {
             background-color: #000000 !important;
         }
