@@ -6,7 +6,7 @@
 // @homepage     https://github.com/SoClear/scripts
 // @updateURL    https://cdn.jsdelivr.net/gh/SoClear/scripts@main/PurgeAndDarkBaiduFanyi.user.js
 // @downloadURL  https://cdn.jsdelivr.net/gh/SoClear/scripts@main/PurgeAndDarkBaiduFanyi.user.js
-// @version      0.1.0
+// @version      0.2.0
 // @match        https://fanyi.baidu.com/*
 // @grant        GM_addStyle
 // @run-at       document-start
@@ -69,7 +69,8 @@
         #side-nav .nav-ol .nav-search-again,
         .domain-trans-wrapper .domain-trans-wrapper-inner,
         .domain-trans-wrapper .domain-trans-bottom,
-        .history-items li
+        .history-items li,
+        .keywords-word
         {
             background-color: #111 !important;
         }
