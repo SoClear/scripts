@@ -6,7 +6,7 @@
 // @homepage     https://github.com/SoClear/scripts
 // @updateURL    https://cdn.jsdelivr.net/gh/SoClear/scripts@main/PurgeAndDarkBaiduFanyi.user.js
 // @downloadURL  https://cdn.jsdelivr.net/gh/SoClear/scripts@main/PurgeAndDarkBaiduFanyi.user.js
-// @version      0.2.0
+// @version      0.2.1
 // @match        https://fanyi.baidu.com/*
 // @grant        GM_addStyle
 // @run-at       document-start
@@ -15,7 +15,7 @@
 (function() {
     'use strict';
     GM_addStyle(`
-        .header,
+        #header,
         .footer.cleafix,
         .divide-wrap,
         .need-collapse .details-cont-item:after, 
