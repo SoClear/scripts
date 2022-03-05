@@ -20,7 +20,8 @@
         .divide-wrap,
         .need-collapse .details-cont-item:after, 
         .need-collapse.to-expand .details-cont-item:after,
-        #app-read
+        #app-read,
+        .app-guide
         {
             display: none !important;
         }
