@@ -7,12 +7,10 @@
 // @version      0.1.0
 // @description  bilibili适配kiwi浏览器桌面版模式
 // @author       soclear
-// @match        https://t.bilibili.com/*
-// @match        https://message.bilibili.com/*
+// @match        https://www.bilibili.com/video/*
 // ==/UserScript==
 
 (function() {
     'use strict';
-    document.querySelector('aside.left').style.paddingLeft = '20vw'
-    document.querySelector('.dialog').style.paddingBottom = '6vh'
+    document.querySelector('.bpx-player-control-mask').style.background = 'linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1))'
 })();
