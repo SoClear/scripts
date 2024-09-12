@@ -4,7 +4,7 @@
 // @homepage     https://github.com/SoClear/scripts
 // @updateURL    https://cdn.jsdelivr.net/gh/SoClear/scripts@main/BilibiliYoutube.user.js
 // @downloadURL  https://cdn.jsdelivr.net/gh/SoClear/scripts@main/BilibiliYoutube.user.js
-// @version      0.1.0
+// @version      0.2.0
 // @description  调节Bilibili和Youtube视频的播放速度、尺寸、旋转角度
 // @author       soclear
 // @match        https://www.youtube.com/*
@@ -24,6 +24,7 @@
  * Shift + z：设置视频尺寸为原尺寸
  * Shift + x：设置视频尺寸 -0.05倍
  * Shift + c：设置视频尺寸 +0.05倍
+ * Shift + r：视频旋转90度并设置视频尺寸为1.6倍
  */
 (function() {
     'use strict';
@@ -160,6 +161,12 @@
                 }
                 case 'C': {
                     count.scale += 0.05
+                    setTransform()
+                    break
+                }
+                case 'R': {
+                    count.rotate90deg = (count.rotate90deg + 1) % 4
+                    count.scale = 1.6
                     setTransform()
                     break
                 }
